@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos Ferrari en Venta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function comprarAuto(nombre) {
+            alert("¡Has comprado el " + nombre + "!");
+        }
+
+        function reproducirSonido(id) {
+            const audio = document.getElementById(id);
+            audio.play();
+        }
+
+        function toggleDetalles(id) {
+            const detalles = document.getElementById(id);
+            detalles.style.display = (detalles.style.display === "none" || detalles.style.display === "") ? "block" : "none";
+        }
+
+        function toggleFormulario(id) {
+            const formulario = document.getElementById(id);
+            formulario.style.display = (formulario.style.display === "none" || formulario.style.display === "") ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+
+    <header class="bg-danger text-white text-center py-5">
+        <h1>Bienvenido a la Página de Autos Ferrari</h1>
+        <p>Explora nuestra colección de modelos exclusivos</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Inicio</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Modelos de Ferrari en Venta</h2>
+        <p>Descubre los modelos más icónicos y potentes de Ferrari:</p>
+        <div class="row">
+            <!-- Ferrari F8 Tributo -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ferrari f8 tributo.jpeg" class="card-img-top" alt="Ferrari F8 Tributo">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrari F8 Tributo</h5>
+                        <p class="card-text">Un superdeportivo con un motor V8 y un diseño que evoca la emoción de la velocidad.</p>
+                        <p><strong>Precio: $280,000</strong></p>
+                        <button class="btn btn-primary" onclick="toggleFormulario('formularioF8')">Comprar</button>
+                        <button class="btn btn-secondary" onclick="toggleDetalles('detallesF8')">Ver Detalles</button>
+                        <button class="btn btn-info mt-2" onclick="reproducirSonido('audioF8')">Escuchar Sonido</button>
+                        <audio id="audioF8" src="f8 tributo.mpeg"></audio>
+                        <div id="detallesF8" style="display:none; margin-top: 10px;">
+                            <p><strong>Detalles:</strong> El F8 Tributo es un homenaje a la historia de Ferrari, combinando potencia y elegancia en cada curva.</p>
+                        </div>
+                        <div id="formularioF8" style="display:none; margin-top: 10px;">
+                            <h6>Formulario de Compra</h6>
+                            <form onsubmit="event.preventDefault(); comprarAuto('Ferrari F8 Tributo');">
+                                <div class="form-group">
+                                    <label for="nombreF8">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombreF8" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellidoF8">Apellido:</label>
+                                    <input type="text" class="form-control" id="apellidoF8" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccionF8">Dirección:</label>
+                                    <input type="text" class="form-control" id="direccionF8" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pagoF8">Forma de Pago:</label>
+                                    <select class="form-control" id="pagoF8" required>
+                                        <option value="tarjeta">Tarjeta de Crédito</option>
+                                        <option value="efectivo">Efectivo</option>
+                                        <option value="transferencia">Transferencia Bancaria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailF8">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="emailF8" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Confirmar Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ferrari 488 GTB -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ferrari 488 gtb.jpeg" class="card-img-top" alt="Ferrari 488 GTB">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrari 488 GTB</h5>
+                        <p class="card-text">Un verdadero símbolo de rendimiento y lujo, con un diseño aerodinámico y motor V8.</p>
+                        <p><strong>Precio: $250,000</strong></p>
+                        <button class="btn btn-primary" onclick="toggleFormulario('formulario488')">Comprar</button>
+                        <button class="btn btn-secondary" onclick="toggleDetalles('detalles488')">Ver Detalles</button>
+                        <button class="btn btn-info mt-2" onclick="reproducirSonido('audio488')">Escuchar Sonido</button>
+                        <audio id="audio488" src="ferraroi 4882 gtd.mpeg"></audio>
+                        <div id="detalles488" style="display:none; margin-top: 10px;">
+                            <p><strong>Detalles:</strong> El 488 GTB ofrece una experiencia de conducción inigualable, con un motor que produce 670 caballos de fuerza.</p>
+                        </div>
+                        <div id="formulario488" style="display:none; margin-top: 10px;">
+                            <h6>Formulario de Compra</h6>
+                            <form onsubmit="event.preventDefault(); comprarAuto('Ferrari 488 GTB');">
+                                <div class="form-group">
+                                    <label for="nombre488">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombre488" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido488">Apellido:</label>
+                                    <input type="text" class="form-control" id="apellido488" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccion488">Dirección:</label>
+                                    <input type="text" class="form-control" id="direccion488" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pago488">Forma de Pago:</label>
+                                    <select class="form-control" id="pago488" required>
+                                        <option value="tarjeta">Tarjeta de Crédito</option>
+                                        <option value="efectivo">Efectivo</option>
+                                        <option value="transferencia">Transferencia Bancaria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email488">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="email488" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Confirmar Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ferrari SF90 Stradale -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ferrari sf90.jpeg" class="card-img-top" alt="Ferrari SF90 Stradale">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrari SF90 Stradale</h5>
+                        <p class="card-text">Un hiperdeportivo híbrido que combina potencia y eficiencia, con un diseño espectacular.</p>
+                        <p><strong>Precio: $625,000</strong></p>
+                        <button class="btn btn-primary" onclick="toggleFormulario('formularioSF90')">Comprar</button>
+                        <button class="btn btn-secondary" onclick="toggleDetalles('detallesSF90')">Ver Detalles</button>
+                        <button class="btn btn-info mt-2" onclick="reproducirSonido('audioSF90')">Escuchar Sonido</button>
+                        <audio id="audioSF90" src="sf90.mpeg"></audio>
+                        <div id="detallesSF90" style="display:none; margin-top: 10px;">
+                            <p><strong>Detalles:</strong> El SF90 Stradale es el modelo más potente de Ferrari, con 1000 caballos de fuerza y una aceleración increíble.</p>
+                        </div>
+                        <div id="formularioSF90" style="display:none; margin-top: 10px;">
+                            <h6>Formulario de Compra</h6>
+                            <form onsubmit="event.preventDefault(); comprarAuto('Ferrari SF90 Stradale');">
+                                <div class="form-group">
+                                    <label for="nombreSF90">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombreSF90" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellidoSF90">Apellido:</label>
+                                    <input type="text" class="form-control" id="apellidoSF90" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccionSF90">Dirección:</label>
+                                    <input type="text" class="form-control" id="direccionSF90" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pagoSF90">Forma de Pago:</label>
+                                    <select class="form-control" id="pagoSF90" required>
+                                        <option value="tarjeta">Tarjeta de Crédito</option>
+                                        <option value="efectivo">Efectivo</option>
+                                        <option value="transferencia">Transferencia Bancaria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailSF90">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="emailSF90" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Confirmar Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ferrari LaFerrari -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ferrari laferrari.jpeg" class="card-img-top" alt="Ferrari LaFerrari">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrari LaFerrari</h5>
+                        <p class="card-text">Una obra maestra de ingeniería, combina un motor V12 con tecnología híbrida.</p>
+                        <p><strong>Precio: $1,500,000</strong></p>
+                        <button class="btn btn-primary" onclick="toggleFormulario('formularioLaFerrari')">Comprar</button>
+                        <button class="btn btn-secondary" onclick="toggleDetalles('detallesLaFerrari')">Ver Detalles</button>
+                        <button class="btn btn-info mt-2" onclick="reproducirSonido('audioLaFerrari')">Escuchar Sonido</button>
+                        <audio id="audioLaFerrari" src="ferrari la.mpeg"></audio>
+                        <div id="detallesLaFerrari" style="display:none; margin-top: 10px;">
+                            <p><strong>Detalles:</strong> LaFerrari es la máxima expresión de Ferrari en términos de tecnología y rendimiento.</p>
+                        </div>
+                        <div id="formularioLaFerrari" style="display:none; margin-top: 10px;">
+                            <h6>Formulario de Compra</h6>
+                            <form onsubmit="event.preventDefault(); comprarAuto('Ferrari LaFerrari');">
+                                <div class="form-group">
+                                    <label for="nombreLaFerrari">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombreLaFerrari" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellidoLaFerrari">Apellido:</label>
+                                    <input type="text" class="form-control" id="apellidoLaFerrari" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccionLaFerrari">Dirección:</label>
+                                    <input type="text" class="form-control" id="direccionLaFerrari" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pagoLaFerrari">Forma de Pago:</label>
+                                    <select class="form-control" id="pagoLaFerrari" required>
+                                        <option value="tarjeta">Tarjeta de Crédito</option>
+                                        <option value="efectivo">Efectivo</option>
+                                        <option value="transferencia">Transferencia Bancaria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailLaFerrari">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="emailLaFerrari" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Confirmar Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ferrari Portofino -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ferrari portofino.jpeg" class="card-img-top" alt="Ferrari Portofino">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrari Portofino</h5>
+                        <p class="card-text">Un convertible que combina lujo y rendimiento en un diseño elegante.</p>
+                        <p><strong>Precio: $220,000</strong></p>
+                        <button class="btn btn-primary" onclick="toggleFormulario('formularioPortofino')">Comprar</button>
+                        <button class="btn btn-secondary" onclick="toggleDetalles('detallesPortofino')">Ver Detalles</button>
+                        <button class="btn btn-info mt-2" onclick="reproducirSonido('audioPortofino')">Escuchar Sonido</button>
+                        <audio id="audioPortofino" src="portofino.mpeg"></audio>
+                        <div id="detallesPortofino" style="display:none; margin-top: 10px;">
+                            <p><strong>Detalles:</strong> El Portofino ofrece una experiencia de conducción única, perfecta para paseos al aire libre.</p>
+                        </div>
+                        <div id="formularioPortofino" style="display:none; margin-top: 10px;">
+                            <h6>Formulario de Compra</h6>
+                            <form onsubmit="event.preventDefault(); comprarAuto('Ferrari Portofino');">
+                                <div class="form-group">
+                                    <label for="nombrePortofino">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombrePortofino" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellidoPortofino">Apellido:</label>
+                                    <input type="text" class="form-control" id="apellidoPortofino" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccionPortofino">Dirección:</label>
+                                    <input type="text" class="form-control" id="direccionPortofino" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pagoPortofino">Forma de Pago:</label>
+                                    <select class="form-control" id="pagoPortofino" required>
+                                        <option value="tarjeta">Tarjeta de Crédito</option>
+                                        <option value="efectivo">Efectivo</option>
+                                        <option value="transferencia">Transferencia Bancaria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailPortofino">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="emailPortofino" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Confirmar Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ferrari 812 Superfast -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ferrari 812.jpeg" class="card-img-top" alt="Ferrari 812 Superfast">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrari 812 Superfast</h5>
+                        <p class="card-text">Un gran turismo que ofrece un rendimiento impresionante con su motor V12.</p>
+                        <p><strong>Precio: $340,000</strong></p>
+                        <button class="btn btn-primary" onclick="toggleFormulario('formulario812')">Comprar</button>
+                        <button class="btn btn-secondary" onclick="toggleDetalles('detalles812')">Ver Detalles</button>
+                        <button class="btn btn-info mt-2" onclick="reproducirSonido('audio812')">Escuchar Sonido</button>
+                        <audio id="audio812" src="ferrari superfast.mpeg"></audio>
+                        <div id="detalles812" style="display:none; margin-top: 10px;">
+                            <p><strong>Detalles:</strong> La 812 Superfast es conocida por su potencia y su velocidad máxima de 340 km/h.</p>
+                        </div>
+                        <div id="formulario812" style="display:none; margin-top: 10px;">
+                            <h6>Formulario de Compra</h6>
+                            <form onsubmit="event.preventDefault(); comprarAuto('Ferrari 812 Superfast');">
+                                <div class="form-group">
+                                    <label for="nombre812">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombre812" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido812">Apellido:</label>
+                                    <input type="text" class="form-control" id="apellido812" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccion812">Dirección:</label>
+                                    <input type="text" class="form-control" id="direccion812" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pago812">Forma de Pago:</label>
+                                    <select class="form-control" id="pago812" required>
+                                        <option value="tarjeta">Tarjeta de Crédito</option>
+                                        <option value="efectivo">Efectivo</option>
+                                        <option value="transferencia">Transferencia Bancaria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email812">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="email812" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Confirmar Compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Autos Ferrari. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
